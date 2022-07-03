@@ -69,9 +69,6 @@ function App() {
         <div class="center-on-page">
   <br></br>
   <br></br>
-  <div class="pokeball">
-    <div class="pokeball__button"></div>
-  </div>
   
 </div>
     </div>
