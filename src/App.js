@@ -1,6 +1,13 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+
+import {Home} from "./routes/Home"
+import {Pokemons} from "./routes/Pokemons"
+import {Pokemon} from "./routes/Pokemon"
+import {Estudiante} from "./routes/Estudiante"
+
 
 function App() {
   const [id, setId] = useState(200)
@@ -57,22 +64,33 @@ function App() {
 
 
   return (
-    <div className="App" >
-    <div className="imagen" >
-        <h1 className="">{pokemon.name}</h1>  
-        <img src={pokemon.image} alt="pokemon" />   
-        <h1>Experiencia:{pokemon.experience}</h1>
-        <h1>Peso:{pokemon.weight} Kg.</h1>
-        </div>
-        <button onClick={() => pokemonReducir(id)} className="boton">Atras</button>
-        <button onClick={() => obtenerInformacion(id)} className="boton">Siguiente</button>
-        <div class="center-on-page">
-  <br></br>
-  <br></br>
+//     <div className="App" >
+//     <div className="imagen" >
+//         <h1 className="">{pokemon.name}</h1>  
+//         <img src={pokemon.image} alt="pokemon" />   
+//         <h1>Experiencia:{pokemon.experience}</h1>
+//         <h1>Peso:{pokemon.weight} Kg.</h1>
+//         </div>
+//         <button onClick={() => pokemonReducir(id)} className="boton">Atras</button>
+//         <button onClick={() => obtenerInformacion(id)} className="boton">Siguiente</button>
+//         <div class="center-on-page">
+//   <br></br>
+//   <br></br>
   
-</div>
+// </div>
+//     </div>
+<div>
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pokemons" element={<Pokemons />} />
+          <Route path="/pokemon/:id" element={<Pokemon />} />
+          <Route path="/190547" element={<Estudiante />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App;
