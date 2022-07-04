@@ -1,10 +1,12 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+
+import { Navbar } from './components/navbar';
 
 import {Home} from "./routes/Home"
-import {Pokemons} from "./routes/Pokemons"
+import {Pokemons} from "./routes/Pokemons"      ////Rutas
 import {Pokemon} from "./routes/Pokemon"
 import {Estudiante} from "./routes/Estudiante"
 
@@ -81,7 +83,7 @@ function App() {
 //     </div>
 <div>
       <BrowserRouter>
-      <Navbar />
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pokemons" element={<Pokemons />} />
