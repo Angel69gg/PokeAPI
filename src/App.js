@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import { Navbar } from './components/navbar';
 
-import {Home} from "./routes/Home"
 import {Pokemons} from "./routes/Pokemons"      ////Rutas
 import {Pokemon} from "./routes/Pokemon"
 import {Estudiante} from "./routes/Estudiante"
@@ -83,10 +82,11 @@ function App() {
 //     </div>
 <div>
       <BrowserRouter>
+      <div className='w-36'>
       <Navbar/>
+      </div>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/pokemons" element={<Pokemons />} />
+          <Route path="/" element={<Pokemons />} />
           <Route path="/pokemon/:id" element={<Pokemon />} />
           <Route path="/190547" element={<Estudiante />} />
         </Routes>

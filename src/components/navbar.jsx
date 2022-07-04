@@ -9,35 +9,16 @@ export const Navbar = () => {
         desactivate: ""
     }
     return (
-        <div>
-            <nav>
-                <ul className=" font-bold text-center">
-                    <li className="w-full border border-black">
-                            <NavLink
-                                className={({ isActive }) => (isActive ? activeStyle.activate : activeStyle.desactivate)}
-                                to="/"
-                            >
-                                Bienvenido
-                            </NavLink>
-                        </li>
-                    <li className="w-full border border-black">
-                            <NavLink
-                                className={({ isActive }) => (isActive ? activeStyle.activate : activeStyle.desactivate)}
-                                to="pokemons"
-                            >
-                                Lista Pokemones
-                            </NavLink>
-                        </li>
-                    <li className="w-full border border-black">
-                            <NavLink
-                                className={({ isActive }) => (isActive ? activeStyle.activate : activeStyle.desactivate)}
-                                to="191508"
-                            >
-                                Datos del estudiante
-                            </NavLink>
-                        </li>
-                </ul>
-            </nav>
-        </div>
+            <div className="flex flex-col items-center w-16 h-full overflow-hidden text-gray-700 bg-gray-100 rounded" >
+		<NavLink className="flex items-center justify-center mt-3" to="190547" >
+			Estudiante
+		</NavLink>
+		<div className="flex flex-col items-center mt-3 border-t border-gray-300">
+			<NavLink className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-gray-300" to="/">
+            Pokemons
+			</NavLink>
+		</div>
+	</div>
+       
     )
 }
