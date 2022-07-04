@@ -39,7 +39,9 @@ export const Pokemons = () => {
                 state.sort((a,b) => a.id>b.id?1:-1)
                 return state;
             })
+           
         })
+        
     }
 
 
@@ -74,4 +76,5 @@ export const Pokemons = () => {
     )}
 </div>
     )
+    
 }
